@@ -29,6 +29,7 @@ ul li a {
   /* background-image: linear-gradient(45deg, #000, #313, #000); */
   background-size: 100%;
   background-repeat: repeat;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: 5px;
@@ -112,6 +113,7 @@ section {
 
 .menu-list__item {
   padding: 15px 0;
+  margin: 0 10px;
 }
 
 .menu-list__item i {
@@ -131,69 +133,6 @@ section {
 
 .menu-btn {
   display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .menu-list {
-    transform: translateY(-200%);
-    position: absolute;
-  }
-  .menu-btn {
-    height: 50px;
-    width: 50px;
-    border: 0;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  
-  .menu-btn div {
-    width: 80%;
-    height: 4px;
-    background-color: #fff;
-    border-radius: 10px;
-    transform-origin: left;
-    transition: all 0.5s;
-  }
-  
-  
-  .open div:first-child {
-    transform: rotate(45deg) ;
-    width: 100%;
-  }
-  
-  .open div:nth-child(2) {
-    opacity: 0;
-  }
-
-  .open div:nth-child(3) {
-    transform: rotate(-45deg) ;
-    width: 100%;
-  }
-
-  .open-list {
-    display: flex;
-    transform: translateY(60px);
-    transition: .7s all;
-    background-color: #314;
-    width: 200px;
-  }
-
-}
-
-@media screen and (min-width: 769px) {
-  .menu-list {
-    flex-direction: row;
-    letter-spacing: 0;
-  }
-  .menu-list__item a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-  }
 }
 
 /* HEADER */
@@ -291,13 +230,13 @@ main {
 }
 
 .sobre-mi__contenido__item h4 {
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   position: relative;
 }
 
 .sobre-mi__contenido__item p {
   margin: 0 10px;
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
   transform: translateY(-100%);
   opacity: 0;
@@ -332,6 +271,7 @@ main {
   opacity: 1;
   transition: 0.5s all;
 }
+
 /* Seccion Experiencias Laborales */
 #experiencia {
   margin: 100px 0px;
@@ -406,6 +346,7 @@ main {
 }
 
 /* Seccion Skills */
+
 #skills {
   min-height: 40vh;
 }
@@ -431,22 +372,41 @@ main {
   margin: 100px 20px;
 }
 
+.skill__item__titulo {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill__item__titulo img{
+  margin: 0 10px;
+  width: 70px;
+  height: 70px;
+}
+
 .progress-bar.css {
   background-color: rgb(4, 71, 255);
+  width: 95%
 }
 
 .progress-bar.javascript {
   background-color: rgb(255, 117, 25);
+  width: 70%
 }
 
 .progress-bar.html {
   background-color: rgb(49, 236, 12);
+  width: 95%
 }
 
 .progress-bar.ingles {
-  background-color: rgb(41, 248, 203);
+  background-color: rgb(255, 0, 0);
+  width: 65%
 }
+
 /* FOOTER */
+
 footer {
   margin-top: 40px;
   margin-bottom: 10px;
@@ -476,11 +436,76 @@ footer {
   background-image: linear-gradient(45deg, #618, #ece, #618);
   background-size: 100%;
   background-repeat: repeat;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* AREA RESPONSIVA */
+
+@media screen and (max-width: 768px) {
+  .menu-list {
+    transform: translateY(-200%);
+    position: absolute;
+  }
+  .menu-btn {
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .menu-btn div {
+    width: 80%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    transform-origin: left;
+    transition: all 0.5s;
+  }
+  
+  
+  .open div:first-child {
+    transform: rotate(45deg) ;
+    width: 100%;
+  }
+  
+  .open div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .open div:nth-child(3) {
+    transform: rotate(-45deg) ;
+    width: 100%;
+  }
+
+  .open-list {
+    display: flex;
+    transform: translateY(60px);
+    transition: .7s all;
+    background-color: #314;
+    width: 200px;
+  }
+
+}
+
+@media screen and (min-width: 769px) {
+  .menu-list {
+    flex-direction: row;
+    letter-spacing: 0;
+  }
+  .menu-list__item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+  }
+}
+
 
 @media only screen and (min-width: 768px) {
   .linea-tiempo:before {
